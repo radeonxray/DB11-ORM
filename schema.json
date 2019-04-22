@@ -1,0 +1,47 @@
+{
+    "schemaName": "MicroShop",
+    "entities": [
+        {
+            "Customer": {
+                "name": "String",
+                "orders": "*Order"
+            }
+        },
+        {
+            "Order": {
+                "date": "String",
+                "total": "Number",
+                "customer": "Customer",
+                "lines": "*OrderLine"
+            }
+        },
+        {
+            "OrderLine": {
+                "order": "*Order",
+                "product": "*Product",
+                "count": "Number",
+                "total": "Number"
+            }
+        },
+        {
+            "Product": {
+                "name": "String",
+                "price": "Number"
+            }
+        },
+        {
+            "ViktoKim": {
+                "order": "*Order",
+                "product": "*Product",
+                "cars": "*Cars"
+            }
+        },
+        {
+            "Cars": {
+                "name": "String",
+                "price": "Number",
+                "viktokim": "ViktoKim"
+            }
+        }
+    ]
+}
